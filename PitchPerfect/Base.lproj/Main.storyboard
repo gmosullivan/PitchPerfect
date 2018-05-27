@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,29 +15,29 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTt-s5-24O">
-                                <rect key="frame" x="163" y="318" width="49" height="30"/>
-                                <state key="normal" title="Record"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTt-s5-24O">
+                                <rect key="frame" x="82.5" y="206.5" width="155" height="155"/>
+                                <state key="normal" image="Record"/>
                                 <connections>
                                     <action selector="recordSound" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXf-Ag-iXe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iq4-pJ-ZPI">
-                                <rect key="frame" x="136" y="356" width="102" height="21"/>
+                                <rect key="frame" x="109" y="381.5" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ced-L7-JkV">
-                                <rect key="frame" x="157" y="385" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ced-L7-JkV">
+                                <rect key="frame" x="130" y="422.5" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9rx-2D-x0X"/>
                                     <constraint firstAttribute="width" constant="60" id="Lah-7G-DdQ"/>
                                 </constraints>
-                                <state key="normal" title="Stop"/>
+                                <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mpd-Jk-v2h"/>
                                 </connections>
@@ -45,8 +45,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Iq4-pJ-ZPI" firstAttribute="top" secondItem="mTt-s5-24O" secondAttribute="bottom" constant="8" id="5Yc-Kw-BMj"/>
-                            <constraint firstItem="ced-L7-JkV" firstAttribute="top" secondItem="Iq4-pJ-ZPI" secondAttribute="bottom" constant="8" id="98V-PN-tqC"/>
+                            <constraint firstItem="Iq4-pJ-ZPI" firstAttribute="top" secondItem="mTt-s5-24O" secondAttribute="bottom" constant="20" id="5Yc-Kw-BMj"/>
+                            <constraint firstItem="ced-L7-JkV" firstAttribute="top" secondItem="Iq4-pJ-ZPI" secondAttribute="bottom" constant="20" id="98V-PN-tqC"/>
                             <constraint firstItem="mTt-s5-24O" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A9b-vq-cIe"/>
                             <constraint firstItem="Iq4-pJ-ZPI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eud-C5-YmA"/>
                             <constraint firstItem="mTt-s5-24O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lFJ-Le-VFf"/>
@@ -64,4 +64,8 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Record" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
+    </resources>
 </document>
