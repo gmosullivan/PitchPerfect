@@ -9,11 +9,34 @@
 import UIKit
 
 class PlaySoundsViewController: UIViewController {
+    
+    @IBOutlet weak var halfSpeedButton: UIButton!
+    @IBOutlet weak var doubleSpeedButton: UIButton!
+    @IBOutlet weak var thirdSpeedButton: UIButton!
+    @IBOutlet weak var tripleSpeedButton:UIButton!
+    @IBOutlet weak var lowPitchButton: UIButton!
+    @IBOutlet weak var highPitchButton: UIButton!
+    @IBOutlet weak var echoButton: UIButton!
+    @IBOutlet weak var reverbButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
 
     var recordedAudioURL: URL!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func setSoundEffect() {
+        //Changes the default sound effects
+    }
+    
+    @IBAction func stopAudio () {
+        //Stops audio and clears effects set
+    }
+    
+    @IBAction func playAudio() {
+        //Plays audio with set sound effects
     }
 
 }
