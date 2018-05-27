@@ -27,6 +27,10 @@ class PlaySoundsViewController: UIViewController {
     var audioEngine: AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
+    var rate: Float!
+    var pitch: Float!
+    var echo: Bool!
+    var reverb: Bool!
     
     enum ButtonType: Int {
         case halfSpeed = 0, doubleSpeed, thirdSpeed, tripleSpeed, lowPitch, highPitch, echo, reverb
@@ -35,6 +39,7 @@ class PlaySoundsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
+        setSoundEffectDefaults()
     }
     
     @IBAction func setSoundEffect() {
@@ -44,11 +49,20 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func stopPlayingAudio () {
         //Stops audio and clears effects set
         stopAudio()
+        setSoundEffectDefaults()
     }
     
     @IBAction func playAudio() {
         //Plays audio with set sound effects
         playSound()
+        setSoundEffectDefaults()
+    }
+    
+    func setSoundEffectDefaults () {
+        rate = 1
+        pitch = 0
+        echo = false
+        reverb = false
     }
     
     func setEffectButtons(_ enabled: Bool) {
