@@ -23,6 +23,10 @@ class PlaySoundsViewController: UIViewController {
 
     var recordedAudioURL: URL!
     
+    enum ButtonType: Int {
+        case halfSpeed = 0, doubleSpeed, thirdSpeed, tripleSpeed, lowPitch, highPitch, echo, reverb
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
