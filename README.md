@@ -24,3 +24,9 @@ Because these additional functions have been added, I have also added 3 extra bu
 I have included a function to control the state of the effect buttons. Because I am enabling multi effects I had to write a function to keep some buttons enabled whilst also disabling the necessary buttons (for example, if the user clicks half speed, all of the other speed functions are disabled as half speed has been set).
 
 I have tried to simplify the code and tried writing as a ternary operator but I keep getting error messages. If you could provide some advice or point me in the right direction to improve this this would be great.
+
+## Code / File Submission
+
+This project is based on the Udacity Pitch Perfect project. I completed the project and started agin from scratch, referencing the project where needed. The extension file is copied from the original project with the necessary modifications which I have done by myself.
+
+The majority of icons and images were copied from the original project with the exception of the halfSpeed, tripleSpeed and play buttons which were provided by Doma Dybowski. She has given me full authority to use the images in this project.
