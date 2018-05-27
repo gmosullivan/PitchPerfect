@@ -11,9 +11,13 @@ import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
+    // MARK:- Outlets
+    
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var stopRecordingButton: UIButton!
+    
+    // MARK:- Variables
     
     var audioRecorder: AVAudioRecorder!
     
@@ -21,6 +25,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         super.viewDidLoad()
         configureUI(false)
     }
+    
+    // MARK:- Button Actions
     
     @IBAction func recordSound() {
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
@@ -59,6 +65,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         configureUI(false)
     }
     
+    // MARK:- UI Functions
+    
     func configureUI(_ isRecording: Bool) {
         if isRecording {
             recordingLabel.text = "Recording in Progress."
@@ -71,6 +79,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
+    // MARK:- Delegate Methods
+    
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
             performSegue(withIdentifier: "playRecording", sender: audioRecorder.url)
@@ -78,6 +88,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             print("The recording was not successful.")
         }
     }
+    
+    // MARK Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "playRecording" {

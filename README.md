@@ -14,8 +14,8 @@ An app which allows the user to record their voice and add sound effects to the 
 ## Notes to assessor
 
 I have added some extra buttons to further enhance the functionality of Pitch Perfect. You can now:
-*Play multiple effects at one time
-*Speed up or slow down your audio to third speed or triple speed
+* Play multiple effects at one time
+* Speed up or slow down your audio to third speed or triple speed
 
 Because these additional functions have been added, I have also added 3 extra buttons. Whilst building this app I disabled landscape mode because it makes viewing in landscape mode on an iPhone SE very squashed. I have enabled landscape mode as the grading guidelines request this, but i do hope I am not marked down on this.
 

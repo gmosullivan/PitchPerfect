@@ -11,6 +11,8 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
+    // MARK:- Outlets
+    
     @IBOutlet weak var halfSpeedButton: UIButton!
     @IBOutlet weak var doubleSpeedButton: UIButton!
     @IBOutlet weak var thirdSpeedButton: UIButton!
@@ -22,6 +24,8 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
 
+    // MARK:- Variables
+    
     var recordedAudioURL: URL!
     var audioFile: AVAudioFile!
     var audioEngine: AVAudioEngine!
@@ -31,6 +35,8 @@ class PlaySoundsViewController: UIViewController {
     var pitch: Float!
     var echo: Bool!
     var reverb: Bool!
+    
+    // MARK:- Enumerations
     
     enum ButtonType: Int {
         case halfSpeed = 0, doubleSpeed, thirdSpeed, tripleSpeed, lowPitch, highPitch, echo, reverb
@@ -42,6 +48,8 @@ class PlaySoundsViewController: UIViewController {
         setSoundEffectDefaults()
         configureUI(.notPlaying)
     }
+    
+    // MARK:- Button Actions
     
     @IBAction func setSoundEffect(_ sender: UIButton) {
         //Changes the default sound effects
@@ -85,6 +93,8 @@ class PlaySoundsViewController: UIViewController {
         echo = false
         reverb = false
     }
+    
+    // MARK:- UI Functions
     
     func setEffectButtons(_ enabled: Bool) {
         //Manages whether the effect buttons are enabled or not
