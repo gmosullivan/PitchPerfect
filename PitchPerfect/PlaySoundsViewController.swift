@@ -34,22 +34,26 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAudio()
     }
     
     @IBAction func setSoundEffect() {
         //Changes the default sound effects
     }
     
-    @IBAction func stopAudio () {
+    @IBAction func stopPlayingAudio () {
         //Stops audio and clears effects set
+        stopAudio()
     }
     
     @IBAction func playAudio() {
         //Plays audio with set sound effects
+        playSound()
     }
     
-    func setEffectButtons() {
+    func setEffectButtons(_ enabled: Bool) {
         //Manages whether the effect buttons are enabled or not
+        print("do nothing")
     }
 
 }

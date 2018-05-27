@@ -163,7 +163,7 @@
                                 </constraints>
                                 <state key="normal" image="Stop"/>
                                 <connections>
-                                    <action selector="stopAudio" destination="t5t-sB-wXG" eventType="touchUpInside" id="sAh-9j-4Bv"/>
+                                    <action selector="stopPlayingAudio" destination="t5t-sB-wXG" eventType="touchUpInside" id="rXS-J2-DBH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjx-uW-hcX" userLabel="PlayButton">
