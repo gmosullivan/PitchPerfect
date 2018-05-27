@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
@@ -22,6 +23,10 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
 
     var recordedAudioURL: URL!
+    var audioFile: AVAudioFile!
+    var audioEngine: AVAudioEngine!
+    var audioPlayerNode: AVAudioPlayerNode!
+    var stopTimer: Timer!
     
     enum ButtonType: Int {
         case halfSpeed = 0, doubleSpeed, thirdSpeed, tripleSpeed, lowPitch, highPitch, echo, reverb
@@ -41,6 +46,10 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func playAudio() {
         //Plays audio with set sound effects
+    }
+    
+    func setEffectButtons() {
+        //Manages whether the effect buttons are enabled or not
     }
 
 }
