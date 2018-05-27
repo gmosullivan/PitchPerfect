@@ -16,15 +16,27 @@ class RecordSoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        configureUI(false)
     }
     
     @IBAction func recordSound() {
-        //Starts the recording
+        configureUI(true)
     }
     
     @IBAction func stopRecording() {
-        //Stops the recording
+        configureUI(false)
+    }
+    
+    func configureUI( _ isRecording: Bool) {
+        if isRecording {
+            recordingLabel.text = "Recording in Progress."
+            recordButton.isEnabled = false
+            stopRecordingButton.isEnabled = true
+        } else {
+            recordingLabel.text = "Tap to Record."
+            recordButton.isEnabled = true
+            stopRecordingButton.isEnabled = false
+        }
     }
 
 }
