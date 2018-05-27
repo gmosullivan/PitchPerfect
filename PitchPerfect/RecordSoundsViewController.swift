@@ -78,6 +78,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             print("The recording was not successful.")
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "playRecording" {
+            let playSoundsVC = segue.destination as! PlaySoundsViewController
+            let recordedAudioURL = sender as! URL
+            playSoundsVC.recordedAudioURL = recordedAudioURL
+        }
+    }
 
 }
 
