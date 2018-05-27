@@ -84,14 +84,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="103.5"/>
                                                 <state key="normal" image="HalfSpeed"/>
                                                 <connections>
-                                                    <action selector="setSoundEffect" destination="t5t-sB-wXG" eventType="touchUpInside" id="T1b-po-8w9"/>
+                                                    <action selector="setSoundEffect:" destination="t5t-sB-wXG" eventType="touchUpInside" id="nO2-tT-ccr"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGO-zu-Dl7" userLabel="DoubleSpeedButton">
                                                 <rect key="frame" x="160" y="0.0" width="160" height="103.5"/>
                                                 <state key="normal" image="DoubleSpeed"/>
                                                 <connections>
-                                                    <action selector="setSoundEffect" destination="t5t-sB-wXG" eventType="touchUpInside" id="H1H-CS-zc7"/>
+                                                    <action selector="setSoundEffect:" destination="t5t-sB-wXG" eventType="touchUpInside" id="nS6-PS-Dh7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -103,14 +103,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="103.5"/>
                                                 <state key="normal" image="ThirdSpeed"/>
                                                 <connections>
-                                                    <action selector="setSoundEffect" destination="t5t-sB-wXG" eventType="touchUpInside" id="CGQ-6o-onB"/>
+                                                    <action selector="setSoundEffect:" destination="t5t-sB-wXG" eventType="touchUpInside" id="hkp-lW-mZu"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INY-U2-qdq" userLabel="TripleSpeedButton">
                                                 <rect key="frame" x="160" y="0.0" width="160" height="103.5"/>
                                                 <state key="normal" image="TripleSpeed"/>
                                                 <connections>
-                                                    <action selector="setSoundEffect" destination="t5t-sB-wXG" eventType="touchUpInside" id="1i1-vZ-fW1"/>
+                                                    <action selector="setSoundEffect:" destination="t5t-sB-wXG" eventType="touchUpInside" id="cjQ-ns-iha"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -122,14 +122,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="103.5"/>
                                                 <state key="normal" image="LowPitch"/>
                                                 <connections>
-                                                    <action selector="setSoundEffect" destination="t5t-sB-wXG" eventType="touchUpInside" id="zcB-XD-IQA"/>
+                                                    <action selector="setSoundEffect:" destination="t5t-sB-wXG" eventType="touchUpInside" id="oZM-Ag-h8K"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUD-NF-cpk" userLabel="HighPitchButton">
                                                 <rect key="frame" x="160" y="0.0" width="160" height="103.5"/>
                                                 <state key="normal" image="HighPitch"/>
                                                 <connections>
-                                                    <action selector="setSoundEffect" destination="t5t-sB-wXG" eventType="touchUpInside" id="Uec-T3-oil"/>
+                                                    <action selector="setSoundEffect:" destination="t5t-sB-wXG" eventType="touchUpInside" id="GUP-f4-Zvt"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -141,14 +141,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="103.5"/>
                                                 <state key="normal" image="Echo"/>
                                                 <connections>
-                                                    <action selector="setSoundEffect" destination="t5t-sB-wXG" eventType="touchUpInside" id="adg-Bw-kLP"/>
+                                                    <action selector="setSoundEffect:" destination="t5t-sB-wXG" eventType="touchUpInside" id="I6z-2R-CvV"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvk-vL-A9Y" userLabel="ReverbButton">
                                                 <rect key="frame" x="160" y="0.0" width="160" height="103.5"/>
                                                 <state key="normal" image="Reverb"/>
                                                 <connections>
-                                                    <action selector="setSoundEffect" destination="t5t-sB-wXG" eventType="touchUpInside" id="CSN-TZ-Fwl"/>
+                                                    <action selector="setSoundEffect:" destination="t5t-sB-wXG" eventType="touchUpInside" id="6jq-do-bDK"/>
                                                 </connections>
                                             </button>
                                         </subviews>

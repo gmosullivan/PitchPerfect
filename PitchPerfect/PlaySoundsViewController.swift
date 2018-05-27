@@ -42,8 +42,26 @@ class PlaySoundsViewController: UIViewController {
         setSoundEffectDefaults()
     }
     
-    @IBAction func setSoundEffect() {
+    @IBAction func setSoundEffect(_ sender: UIButton) {
         //Changes the default sound effects
+        switch(ButtonType(rawValue: sender.tag)!) {
+        case .halfSpeed:
+            rate = 0.5
+        case .doubleSpeed:
+            rate = 1.5
+        case .thirdSpeed:
+            rate = 0.33
+        case .tripleSpeed:
+            rate = 2
+        case .lowPitch:
+            pitch = -1000
+        case .highPitch:
+            pitch = 1000
+        case .echo:
+            echo = true
+        case .reverb:
+            reverb = true
+        }
     }
     
     @IBAction func stopPlayingAudio () {
@@ -54,7 +72,7 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func playAudio() {
         //Plays audio with set sound effects
-        playSound()
+        playSound(rate: rate, pitch: pitch, echo: echo, reverb: reverb)
         setSoundEffectDefaults()
     }
     
