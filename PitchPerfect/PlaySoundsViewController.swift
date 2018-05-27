@@ -40,6 +40,7 @@ class PlaySoundsViewController: UIViewController {
         super.viewDidLoad()
         setupAudio()
         setSoundEffectDefaults()
+        configureUI(.notPlaying)
     }
     
     @IBAction func setSoundEffect(_ sender: UIButton) {
@@ -62,6 +63,7 @@ class PlaySoundsViewController: UIViewController {
         case .reverb:
             reverb = true
         }
+        configureUI(.effectAdded)
     }
     
     @IBAction func stopPlayingAudio () {
@@ -73,6 +75,7 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func playAudio() {
         //Plays audio with set sound effects
         playSound(rate: rate, pitch: pitch, echo: echo, reverb: reverb)
+        configureUI(.playing)
         setSoundEffectDefaults()
     }
     
@@ -85,7 +88,34 @@ class PlaySoundsViewController: UIViewController {
     
     func setEffectButtons(_ enabled: Bool) {
         //Manages whether the effect buttons are enabled or not
-        print("do nothing")
+        if rate == 1 {
+            halfSpeedButton.isEnabled = enabled
+            doubleSpeedButton.isEnabled = enabled
+            thirdSpeedButton.isEnabled = enabled
+            tripleSpeedButton.isEnabled = enabled
+        } else {
+            halfSpeedButton.isEnabled = false
+            doubleSpeedButton.isEnabled = false
+            thirdSpeedButton.isEnabled = false
+            tripleSpeedButton.isEnabled = false
+        }
+        if pitch == 0 {
+            highPitchButton.isEnabled = enabled
+            lowPitchButton.isEnabled = enabled
+        } else {
+            highPitchButton.isEnabled = false
+            lowPitchButton.isEnabled = false
+        }
+        if echo == false {
+            echoButton.isEnabled = enabled
+        } else {
+            echoButton.isEnabled = false
+        }
+        if reverb == false {
+            reverbButton.isEnabled = enabled
+        } else {
+            reverbButton.isEnabled = false
+        }
     }
 
 }
