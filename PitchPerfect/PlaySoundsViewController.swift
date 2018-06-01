@@ -47,22 +47,7 @@ class PlaySoundsViewController: UIViewController {
         setupAudio()
         setSoundEffectDefaults()
         configureUI(.notPlaying)
-        halfSpeedButton.contentMode = .center
-        halfSpeedButton.imageView?.contentMode = .scaleAspectFit
-        doubleSpeedButton.contentMode = .center
-        doubleSpeedButton.imageView?.contentMode = .scaleAspectFit
-        thirdSpeedButton.contentMode = .center
-        thirdSpeedButton.imageView?.contentMode = .scaleAspectFit
-        tripleSpeedButton.contentMode = .center
-        tripleSpeedButton.imageView?.contentMode = .scaleAspectFit
-        lowPitchButton.contentMode = .center
-        lowPitchButton.imageView?.contentMode = .scaleAspectFit
-        highPitchButton.contentMode = .center
-        highPitchButton.imageView?.contentMode = .scaleAspectFit
-        echoButton.contentMode = .center
-        echoButton.imageView?.contentMode = .scaleAspectFit
-        reverbButton.contentMode = .center
-        reverbButton.imageView?.contentMode = .scaleAspectFit
+        setupButtons()
     }
     
     // MARK:- Button Actions
@@ -112,6 +97,22 @@ class PlaySoundsViewController: UIViewController {
     }
     
     // MARK:- UI Functions
+    
+    func setupButton(button: UIButton) {
+        button.contentMode = .center
+        button.imageView?.contentMode = .scaleAspectFit
+    }
+    
+    func setupButtons() {
+        setupButton(button: halfSpeedButton)
+        setupButton(button: doubleSpeedButton)
+        setupButton(button: thirdSpeedButton)
+        setupButton(button: tripleSpeedButton)
+        setupButton(button: lowPitchButton)
+        setupButton(button: highPitchButton)
+        setupButton(button: echoButton)
+        setupButton(button: reverbButton)
+    }
     
     func setEffectButtons(_ enabled: Bool) {
         //Manages whether the effect buttons are enabled or not
