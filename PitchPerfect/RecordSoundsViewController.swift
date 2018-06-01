@@ -11,13 +11,13 @@ import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
-    // MARK:- Outlets
+    // MARK: - Outlets
     
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var stopRecordingButton: UIButton!
     
-    // MARK:- Variables
+    // MARK: - Variables
     
     var audioRecorder: AVAudioRecorder!
     
@@ -26,7 +26,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         configureUI(false)
     }
     
-    // MARK:- Button Actions
+    // MARK: - Button Actions
     
     @IBAction func recordSound() {
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
@@ -65,7 +65,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         configureUI(false)
     }
     
-    // MARK:- UI Functions
+    // MARK: - UI Functions
     
     func configureUI(_ isRecording: Bool) {
         if isRecording {
@@ -79,7 +79,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-    // MARK:- Delegate Methods
+    // MARK: - Delegate Methods
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
@@ -89,7 +89,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-    // MARK Navigation
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "playRecording" {
