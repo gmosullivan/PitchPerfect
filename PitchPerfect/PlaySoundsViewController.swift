@@ -47,6 +47,22 @@ class PlaySoundsViewController: UIViewController {
         setupAudio()
         setSoundEffectDefaults()
         configureUI(.notPlaying)
+        halfSpeedButton.contentMode = .center
+        halfSpeedButton.imageView?.contentMode = .scaleAspectFit
+        doubleSpeedButton.contentMode = .center
+        doubleSpeedButton.imageView?.contentMode = .scaleAspectFit
+        thirdSpeedButton.contentMode = .center
+        thirdSpeedButton.imageView?.contentMode = .scaleAspectFit
+        tripleSpeedButton.contentMode = .center
+        tripleSpeedButton.imageView?.contentMode = .scaleAspectFit
+        lowPitchButton.contentMode = .center
+        lowPitchButton.imageView?.contentMode = .scaleAspectFit
+        highPitchButton.contentMode = .center
+        highPitchButton.imageView?.contentMode = .scaleAspectFit
+        echoButton.contentMode = .center
+        echoButton.imageView?.contentMode = .scaleAspectFit
+        reverbButton.contentMode = .center
+        reverbButton.imageView?.contentMode = .scaleAspectFit
     }
     
     // MARK:- Button Actions
