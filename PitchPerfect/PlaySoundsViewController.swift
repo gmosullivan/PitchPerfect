@@ -94,6 +94,7 @@ class PlaySoundsViewController: UIViewController {
         //Stops audio and clears effects set
         stopAudio()
         setSoundEffectDefaults()
+        configureUI(.notPlaying)
     }
     
     @IBAction func playAudio() {
